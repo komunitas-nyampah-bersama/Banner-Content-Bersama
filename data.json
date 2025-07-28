@@ -1,0 +1,122 @@
+{
+  "community": {
+    "name": "Nyampah Bersama",
+    "slogan": "Komunitas Peduli Lingkungan dan Pengelolaan Sampah",
+    "description": "Bergabunglah dengan komunitas kami untuk menciptakan lingkungan yang lebih bersih dan berkelanjutan. Setiap aksi kecil memiliki dampak besar!",
+    "stats": {
+      "members": 1450,
+      "events": 92,
+      "wasteManaged": 14.2
+    },
+    "socialMedia": {
+      "whatsapp": "https://wa.me/6281234567890",
+      "instagram": "https://instagram.com/nyampahbersama",
+      "facebook": "https://facebook.com/nyampahbersama",
+      "youtube": "https://youtube.com/nyampahbersama",
+      "tiktok": "https://tiktok.com/@nyampahbersama"
+    },
+    "colors": {
+      "primary": "#2ecc71",
+      "primaryDark": "#27ae60",
+      "secondary": "#3498db",
+      "secondaryDark": "#2980b9",
+      "accent": "#e74c3c"
+    }
+  },
+  "activities": [
+    {
+      "id": 1,
+      "title": "Jumat Bersih-Bersih",
+      "description": "Aksi bersih-bersih pantai bersama komunitas setiap Jumat pagi. Terbuka untuk umum dan semua usia. Mari jaga kebersihan pantai kita bersama-sama!",
+      "date": "Setiap Jumat, 07:00 - 09:00",
+      "location": "Pantai Kuta, Bali",
+      "image": "https://images.unsplash.com/photo-1583511655826-05700d52f31d?auto=format&fit=crop&w=600"
+    },
+    {
+      "id": 2,
+      "title": "Workshop Daur Ulang",
+      "description": "Belajar mengubah sampah plastik menjadi barang bernilai ekonomi. Gratis untuk anggota komunitas. Materi: pembuatan tas dari kemasan plastik.",
+      "date": "28 Juli 2023, 13:00 - 15:00",
+      "location": "Ruang Kreatif Nyampah Bersama",
+      "image": "https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?auto=format&fit=crop&w=600"
+    },
+    {
+      "id": 3,
+      "title": "Bank Sampah Digital",
+      "description": "Tukarkan sampah Anda menjadi poin dan dapatkan hadiah menarik melalui aplikasi Bank Sampah Digital kami. Unduh aplikasinya sekarang!",
+      "date": "Program Berkelanjutan",
+      "location": "Seluruh Cabang Nyampah Bersama",
+      "image": "https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=600"
+    },
+    {
+      "id": 4,
+      "title": "Penghijauan Kota",
+      "description": "Aksi penanaman 1000 pohon di area perkotaan untuk mengurangi polusi dan menciptakan lingkungan lebih hijau. Dukung gerakan hijau kota kita!",
+      "date": "5 Agustus 2023, 08:00 - 12:00",
+      "location": "Taman Kota Jakarta",
+      "image": "https://images.unsplash.com/photo-1491147334573-44cbb4602074?auto=format&fit=crop&w=600"
+    },
+    {
+      "id": 5,
+      "title": "Edukasi Sekolah",
+      "description": "Program edukasi pengelolaan sampah untuk siswa sekolah dasar dan menengah di seluruh kota. Mari tanamkan kesadaran lingkungan sejak dini.",
+      "date": "Setiap Rabu, 09:00 - 11:00",
+      "location": "Sekolah-sekolah Mitra",
+      "image": "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=600"
+    },
+    {
+      "id": 6,
+      "title": "Komposting Rumahan",
+      "description": "Pelatihan membuat kompos dari sampah organik rumah tangga. Praktis, mudah, dan ramah lingkungan. Bawa pulang starter kit kompos gratis!",
+      "date": "12 Agustus 2023, 10:00 - 12:00",
+      "location": "Kantor Pusat Nyampah Bersama",
+      "image": "https://images.unsplash.com/photo-1588591795084-1770cb3be374?auto=format&fit=crop&w=600"
+    }
+  ],
+  "testimonials": [
+    {
+      "name": "Budi Santoso",
+      "role": "Anggota sejak 2021",
+      "quote": "Bergabung dengan Nyampah Bersama mengubah cara pandang saya terhadap sampah. Sekarang saya bisa menghasilkan uang dari sampah yang dikelola dengan baik.",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg"
+    },
+    {
+      "name": "Siti Rahayu",
+      "role": "Relawan",
+      "quote": "Aksi bersih-bersih setiap Jumat sangat menyenangkan. Saya bertemu banyak teman baru yang punya semangat sama untuk lingkungan bersih.",
+      "avatar": "https://randomuser.me/api/portraits/women/44.jpg"
+    }
+  ],
+  "upcomingEvents": [
+    {
+      "title": "Pameran Karya Daur Ulang",
+      "date": "15-17 September 2023",
+      "description": "Pameran karya kreatif dari sampah daur ulang karya anggota komunitas"
+    },
+    {
+      "title": "Pelatihan Pembuatan Ecobrick",
+      "date": "23 September 2023",
+      "description": "Belajar membuat bata ramah lingkungan dari botol plastik"
+    }
+  ],
+  "callToActions": [
+    {
+      "text": "Daftar Sekarang",
+      "icon": "user-plus",
+      "url": "#daftar",
+      "type": "primary"
+    },
+    {
+      "text": "Lihat Jadwal",
+      "icon": "calendar-check",
+      "url": "#jadwal",
+      "type": "secondary"
+    },
+    {
+      "text": "Download Aplikasi",
+      "icon": "mobile-alt",
+      "url": "#download",
+      "type": "accent"
+    }
+  ]
+}
