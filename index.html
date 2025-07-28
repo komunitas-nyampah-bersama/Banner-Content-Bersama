@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyampah Bersama - Komunitas Peduli Lingkungan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Nunito:wght@800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2ecc71;
+            --primary-dark: #27ae60;
+            --secondary: #3498db;
+            --secondary-dark: #2980b9;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+            --accent: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1e5799, #207cca, #2989d8, #1e5799);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            position: relative;
+            animation: fadeIn 0.8s ease;
+        }
+        
+        .header {
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            color: white;
+            padding: 25px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+        }
+        
+        .logo {
+            width: 80px;
+            height: 80px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 2;
+            animation: bounce 1.5s infinite alternate;
+        }
+        
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+        
+        .logo i {
+            font-size: 40px;
+            color: var(--primary-dark);
+        }
+        
+        .header h1 {
+            font-family: 'Nunito', sans-serif;
+            font-size: 28px;
+            margin-bottom: 5px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 80%;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .content {
+            padding: 25px 20px;
+        }
+        
+        .content h2 {
+            color: var(--dark);
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+            position: relative;
+        }
+        
+        .content h2::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+            margin: 8px auto 0;
+        }
+        
+        .content p {
+            color: #34495e;
+            text-align: center;
+            margin-bottom: 25px;
+            line-height: 1.6;
+        }
+        
+        .card-container {
+            position: relative;
+            margin: 20px 0;
+            overflow: hidden;
+            padding: 10px 0;
+        }
+        
+        .card-list {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            gap: 15px;
+            padding: 10px 20px;
+            scroll-behavior: smooth;
+            cursor: grab;
+        }
+        
+        .card-list::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .card {
+            scroll-snap-align: start;
+            min-width: 250px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card:active {
+            cursor: grabbing;
+        }
+        
+        .card-img {
+            height: 140px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .card-img::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 40%;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+        }
+        
+        .card-content {
+            padding: 15px;
+        }
+        
+        .card-content h3 {
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
+        
+        .card-content p {
+            color: #7f8c8d;
+            font-size: 14px;
+            text-align: left;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .card-content .date {
+            font-size: 12px;
+            color: var(--secondary);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+        }
+        
+        .date i {
+            margin-right: 5px;
+        }
+        
+        .indicators {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .indicator {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: #bdc3c7;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .indicator.active {
+            background: var(--primary);
+            transform: scale(1.2);
+        }
+        
+        .action-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 25px 0;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+            transition: transform 0.5s ease;
+            opacity: 0;
+        }
+        
+        .btn:hover::after {
+            transform: rotate(30deg) translate(20%, 20%);
+            opacity: 1;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(90deg, var(--secondary), var(--secondary-dark));
+            color: white;
+            box-shadow: 0 4px 10px rgba(52, 152, 219, 0.4);
+        }
+        
+        .btn-secondary {
+            background: white;
+            color: var(--secondary);
+            border: 2px solid var(--secondary);
+        }
+        
+        .btn-accent {
+            background: linear-gradient(90deg, var(--accent), #c0392b);
+            color: white;
+            box-shadow: 0 4px 10px rgba(231, 76, 60, 0.4);
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            border-top: 1px solid #eee;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        
+        .social-icons a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--secondary);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .social-icons a:hover {
+            transform: scale(1.1);
+            background: var(--secondary-dark);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-icons a::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0) 70%);
+            transform: rotate(30deg);
+        }
+        
+        .footer p {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+        
+        .drag-hint {
+            text-align: center;
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+            text-align: center;
+        }
+        
+        .stat-item {
+            padding: 10px;
+        }
+        
+        .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: #7f8c8d;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 30px;
+            color: var(--secondary);
+        }
+        
+        .loading i {
+            font-size: 40px;
+            margin-bottom: 15px;
+            animation: spin 2s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            .card {
+                min-width: 220px;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+                font-size: 14px;
+            }
+            
+            .stats {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fas fa-recycle"></i>
+            </div>
+            <h1 id="communityName">NYAMPAH BERSAMA</h1>
+            <p id="communitySlogan">Komunitas Peduli Lingkungan dan Pengelolaan Sampah</p>
+        </div>
+        
+        <div class="content">
+            <h2>Aksi Nyata Untuk Lingkungan Bersih</h2>
+            <p id="communityDescription">Bergabunglah dengan komunitas kami untuk menciptakan lingkungan yang lebih bersih dan berkelanjutan. Setiap aksi kecil memiliki dampak besar!</p>
+            
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="stat-value" id="statMembers">1.200+</div>
+                    <div class="stat-label">Anggota</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="statEvents">85+</div>
+                    <div class="stat-label">Kegiatan</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value" id="statWaste">12 Ton</div>
+                    <div class="stat-label">Sampah Terkelola</div>
+                </div>
+            </div>
+            
+            <div class="card-container">
+                <div class="card-list" id="cardList">
+                    <div class="loading">
+                        <i class="fas fa-spinner"></i>
+                        <p>Memuat kegiatan...</p>
+                    </div>
+                </div>
+                
+                <div class="indicators" id="indicators">
+                    <!-- Indicators will be generated by JavaScript -->
+                </div>
+                
+                <div class="drag-hint">
+                    <i class="fas fa-arrows-alt-h"></i> Geser untuk melihat kegiatan lainnya
+                </div>
+            </div>
+            
+            <div class="action-buttons" id="actionButtons">
+                <!-- Action buttons will be generated by JavaScript -->
+            </div>
+        </div>
+        
+        <div class="footer">
+            <div class="social-icons" id="socialIcons">
+                <!-- Social icons will be generated by JavaScript -->
+            </div>
+            <p>&copy; 2023 Komunitas Nyampah Bersama. Seluruh hak cipta dilindungi.</p>
+        </div>
+    </div>
+
+    <script>
+        // URL untuk file JSON (bisa disesuaikan)
+        const DATA_URL = 'data.json';
+        
+        // Fungsi untuk memuat data dari JSON
+        async function loadCommunityData() {
+            try {
+                // Tampilkan loading state
+                document.getElementById('cardList').innerHTML = `
+                    <div class="loading">
+                        <i class="fas fa-spinner"></i>
+                        <p>Memuat kegiatan...</p>
+                    </div>
+                `;
+                
+                const response = await fetch(DATA_URL);
+                const data = await response.json();
+                
+                // Update informasi komunitas
+                document.getElementById('communityName').textContent = data.community.name;
+                document.getElementById('communitySlogan').textContent = data.community.slogan;
+                document.getElementById('communityDescription').textContent = data.community.description;
+                
+                // Update statistik
+                document.getElementById('statMembers').textContent = data.community.stats.members + '+';
+                document.getElementById('statEvents').textContent = data.community.stats.events + '+';
+                document.getElementById('statWaste').textContent = data.community.stats.wasteManaged + ' Ton';
+                
+                // Generate cards
+                const cardList = document.getElementById('cardList');
+                cardList.innerHTML = '';
+                data.activities.forEach(activity => {
+                    const card = document.createElement('div');
+                    card.className = 'card';
+                    card.innerHTML = `
+                        <div class="card-img" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('${activity.image}')"></div>
+                        <div class="card-content">
+                            <h3>${activity.title}</h3>
+                            <p>${activity.description}</p>
+                            <p class="date"><i class="far fa-calendar-alt"></i> ${activity.date}</p>
+                        </div>
+                    `;
+                    cardList.appendChild(card);
+                });
+                
+                // Generate indicators
+                const indicatorsContainer = document.getElementById('indicators');
+                indicatorsContainer.innerHTML = '';
+                data.activities.forEach((_, index) => {
+                    const indicator = document.createElement('div');
+                    indicator.className = 'indicator';
+                    if (index === 0) indicator.classList.add('active');
+                    indicatorsContainer.appendChild(indicator);
+                });
+                
+                // Generate action buttons
+                const actionButtonsContainer = document.getElementById('actionButtons');
+                actionButtonsContainer.innerHTML = '';
+                data.callToActions.forEach(action => {
+                    const button = document.createElement('button');
+                    button.className = `btn btn-${action.type}`;
+                    button.innerHTML = `<i class="fas fa-${action.icon}"></i> ${action.text}`;
+                    button.addEventListener('click', () => {
+                        alert(`Aksi: ${action.text}\nURL: ${action.url}`);
+                    });
+                    actionButtonsContainer.appendChild(button);
+                });
+                
+                // Generate social icons
+                const socialIconsContainer = document.getElementById('socialIcons');
+                socialIconsContainer.innerHTML = '';
+                
+                // Tambahkan ikon untuk setiap platform sosial
+                for (const [platform, url] of Object.entries(data.community.socialMedia)) {
+                    const icon = document.createElement('a');
+                    icon.href = url;
+                    icon.target = "_blank";
+                    
+                    let iconClass;
+                    switch(platform) {
+                        case 'whatsapp':
+                            iconClass = 'fab fa-whatsapp';
+                            break;
+                        case 'instagram':
+                            iconClass = 'fab fa-instagram';
+                            break;
+                        case 'facebook':
+                            iconClass = 'fab fa-facebook-f';
+                            break;
+                        case 'youtube':
+                            iconClass = 'fab fa-youtube';
+                            break;
+                        case 'tiktok':
+                            iconClass = 'fab fa-tiktok';
+                            break;
+                        default:
+                            iconClass = 'fas fa-share-alt';
+                    }
+                    
+                    icon.innerHTML = `<i class="${iconClass}"></i>`;
+                    socialIconsContainer.appendChild(icon);
+                }
+                
+                // Inisialisasi drag & drop
+                initDragDrop();
+                
+            } catch (error) {
+                console.error('Error loading data:', error);
+                document.getElementById('cardList').innerHTML = `
+                    <div class="loading">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <p>Gagal memuat data. Silakan coba lagi.</p>
+                    </div>
+                `;
+            }
+        }
+
+        // Fungsi untuk inisialisasi drag & drop
+        function initDragDrop() {
+            const cardList = document.getElementById('cardList');
+            const indicators = document.querySelectorAll('.indicator');
+            let isDragging = false;
+            let startPosition = 0;
+            let currentTranslate = 0;
+            let prevTranslate = 0;
+            let currentIndex = 0;
+            
+            // Setup touch events for mobile
+            cardList.addEventListener('touchstart', touchStart);
+            cardList.addEventListener('touchend', touchEnd);
+            cardList.addEventListener('touchmove', touchMove);
+            
+            // Setup mouse events for desktop
+            cardList.addEventListener('mousedown', dragStart);
+            cardList.addEventListener('mouseup', dragEnd);
+            cardList.addEventListener('mouseleave', dragEnd);
+            cardList.addEventListener('mousemove', drag);
+            
+            function touchStart(e) {
+                startPosition = getPositionX(e);
+                isDragging = true;
+                cardList.style.transition = 'none';
+            }
+            
+            function touchEnd() {
+                isDragging = false;
+                const movedBy = currentTranslate - prevTranslate;
+                
+                if (movedBy < -100 && currentIndex < indicators.length - 1) {
+                    currentIndex++;
+                }
+                
+                if (movedBy > 100 && currentIndex > 0) {
+                    currentIndex--;
+                }
+                
+                setPositionByIndex();
+                updateIndicators();
+            }
+            
+            function touchMove(e) {
+                if (!isDragging) return;
+                e.preventDefault();
+                const currentPosition = getPositionX(e);
+                currentTranslate = prevTranslate + currentPosition - startPosition;
+                setSliderPosition();
+            }
+            
+            function dragStart(e) {
+                startPosition = getPositionX(e);
+                isDragging = true;
+                cardList.style.transition = 'none';
+            }
+            
+            function dragEnd() {
+                isDragging = false;
+                const movedBy = currentTranslate - prevTranslate;
+                
+                if (movedBy < -100 && currentIndex < indicators.length - 1) {
+                    currentIndex++;
+                }
+                
+                if (movedBy > 100 && currentIndex > 0) {
+                    currentIndex--;
+                }
+                
+                setPositionByIndex();
+                updateIndicators();
+            }
+            
+            function drag(e) {
+                if (!isDragging) return;
+                e.preventDefault();
+                const currentPosition = getPositionX(e);
+                currentTranslate = prevTranslate + currentPosition - startPosition;
+                setSliderPosition();
+            }
+            
+            function getPositionX(e) {
+                return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
+            }
+            
+            function setSliderPosition() {
+                cardList.style.transform = `translateX(${currentTranslate}px)`;
+            }
+            
+            function setPositionByIndex() {
+                const cardWidth = document.querySelector('.card').offsetWidth;
+                const gap = 15; // Sesuai dengan gap di CSS
+                currentTranslate = -currentIndex * (cardWidth + gap);
+                prevTranslate = currentTranslate;
+                
+                cardList.style.transition = 'transform 0.5s ease';
+                cardList.style.transform = `translateX(${currentTranslate}px)`;
+            }
+            
+            function updateIndicators() {
+                indicators.forEach((indicator, index) => {
+                    indicator.classList.toggle('active', index === currentIndex);
+                });
+            }
+            
+            // Setup indicator clicks
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    setPositionByIndex();
+                    updateIndicators();
+                });
+            });
+        }
+
+        // Muat data saat halaman siap
+        document.addEventListener('DOMContentLoaded', loadCommunityData);
+    </script>
+</body>
+</html>
