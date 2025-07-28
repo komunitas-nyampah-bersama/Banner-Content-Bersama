@@ -35,7 +35,7 @@
         
         .container {
             width: 100%;
-            max-width: 500px;
+            max-width: 800px;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
@@ -44,6 +44,43 @@
             animation: fadeIn 0.8s ease;
         }
         
+        .tabs {
+            display: flex;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            position: relative;
+            z-index: 10;
+        }
+        
+        .tab {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tab.active {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .tab:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+        
+        .tab-content {
+            display: none;
+            padding: 0;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* Tampilan Banner Styles */
         .header {
             background: linear-gradient(90deg, var(--primary), var(--primary-dark));
             color: white;
@@ -430,6 +467,267 @@
             100% { transform: rotate(360deg); }
         }
         
+        /* Konten Management Styles */
+        .management-container {
+            padding: 20px;
+        }
+        
+        .form-section {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .form-title {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(46, 204, 113, 0.2);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .form-row .form-group {
+            flex: 1;
+            margin-bottom: 0;
+        }
+        
+        .btn-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--accent);
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-icon:hover {
+            transform: scale(1.1);
+            background: #c0392b;
+        }
+        
+        .activities-list {
+            max-height: 400px;
+            overflow-y: auto;
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .activity-item {
+            background: #f9f9f9;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .activity-thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            background-size: cover;
+            background-position: center;
+            flex-shrink: 0;
+        }
+        
+        .activity-details {
+            flex: 1;
+        }
+        
+        .activity-title {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 5px;
+        }
+        
+        .activity-date {
+            font-size: 14px;
+            color: var(--secondary);
+            font-weight: 500;
+        }
+        
+        .activity-actions {
+            display: flex;
+            gap: 10px;
+        }
+        
+        /* Bagikan Styles */
+        .share-container {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .share-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .share-description {
+            color: #555;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .share-btn {
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            border: none;
+            font-size: 1.1rem;
+            color: white;
+            min-width: 220px;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        
+        .share-btn i {
+            font-size: 1.4rem;
+        }
+        
+        .facebook {
+            background: linear-gradient(to right, #3b5998, #4a69a5);
+        }
+        
+        .twitter {
+            background: linear-gradient(to right, #1da1f2, #1a91da);
+        }
+        
+        .whatsapp {
+            background: linear-gradient(to right, #25d366, #128c7e);
+        }
+        
+        .linkedin {
+            background: linear-gradient(to right, #0077b5, #00669c);
+        }
+        
+        .copy-link {
+            background: linear-gradient(to right, #6c757d, #5a6268);
+            margin-top: 15px;
+            width: 100%;
+            max-width: 300px;
+        }
+        
+        .share-preview {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 30px auto;
+            max-width: 500px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: left;
+        }
+        
+        .share-preview img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        .share-preview h3 {
+            color: var(--dark);
+            margin-bottom: 10px;
+        }
+        
+        .share-preview p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 768px) {
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .share-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .share-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .activity-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .activity-thumb {
+                width: 100%;
+                height: 150px;
+            }
+        }
+        
         @media (max-width: 480px) {
             .header h1 {
                 font-size: 24px;
@@ -448,183 +746,469 @@
                 flex-direction: column;
                 gap: 10px;
             }
+            
+            .tabs {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <div class="logo">
-                <i class="fas fa-recycle"></i>
-            </div>
-            <h1 id="communityName">NYAMPAH BERSAMA</h1>
-            <p id="communitySlogan">Komunitas Peduli Lingkungan dan Pengelolaan Sampah</p>
+        <div class="tabs">
+            <div class="tab active" data-tab="banner">Tampilan Banner</div>
+            <div class="tab" data-tab="management">Kelola Konten</div>
+            <div class="tab" data-tab="share">Bagikan</div>
         </div>
         
-        <div class="content">
-            <h2>Aksi Nyata Untuk Lingkungan Bersih</h2>
-            <p id="communityDescription">Bergabunglah dengan komunitas kami untuk menciptakan lingkungan yang lebih bersih dan berkelanjutan. Setiap aksi kecil memiliki dampak besar!</p>
-            
-            <div class="stats">
-                <div class="stat-item">
-                    <div class="stat-value" id="statMembers">1.200+</div>
-                    <div class="stat-label">Anggota</div>
+        <!-- Tab: Banner Tampilan -->
+        <div class="tab-content active" id="banner-tab">
+            <div class="header">
+                <div class="logo">
+                    <i class="fas fa-recycle"></i>
                 </div>
-                <div class="stat-item">
-                    <div class="stat-value" id="statEvents">85+</div>
-                    <div class="stat-label">Kegiatan</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-value" id="statWaste">12 Ton</div>
-                    <div class="stat-label">Sampah Terkelola</div>
-                </div>
+                <h1 id="communityName">NYAMPAH BERSAMA</h1>
+                <p id="communitySlogan">Komunitas Peduli Lingkungan dan Pengelolaan Sampah</p>
             </div>
             
-            <div class="card-container">
-                <div class="card-list" id="cardList">
-                    <div class="loading">
-                        <i class="fas fa-spinner"></i>
-                        <p>Memuat kegiatan...</p>
+            <div class="content">
+                <h2 id="bannerTitle">Aksi Nyata Untuk Lingkungan Bersih</h2>
+                <p id="bannerDescription">Bergabunglah dengan komunitas kami untuk menciptakan lingkungan yang lebih bersih dan berkelanjutan. Setiap aksi kecil memiliki dampak besar!</p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-value" id="statMembers">1.200+</div>
+                        <div class="stat-label">Anggota</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="statEvents">85+</div>
+                        <div class="stat-label">Kegiatan</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value" id="statWaste">12 Ton</div>
+                        <div class="stat-label">Sampah Terkelola</div>
                     </div>
                 </div>
                 
-                <div class="indicators" id="indicators">
-                    <!-- Indicators will be generated by JavaScript -->
+                <div class="card-container">
+                    <div class="card-list" id="cardList">
+                        <!-- Cards will be generated by JavaScript -->
+                    </div>
+                    
+                    <div class="indicators" id="indicators">
+                        <!-- Indicators will be generated by JavaScript -->
+                    </div>
+                    
+                    <div class="drag-hint">
+                        <i class="fas fa-arrows-alt-h"></i> Geser untuk melihat kegiatan lainnya
+                    </div>
                 </div>
                 
-                <div class="drag-hint">
-                    <i class="fas fa-arrows-alt-h"></i> Geser untuk melihat kegiatan lainnya
+                <div class="action-buttons" id="actionButtons">
+                    <!-- Action buttons will be generated by JavaScript -->
                 </div>
             </div>
             
-            <div class="action-buttons" id="actionButtons">
-                <!-- Action buttons will be generated by JavaScript -->
+            <div class="footer">
+                <div class="social-icons" id="socialIcons">
+                    <!-- Social icons will be generated by JavaScript -->
+                </div>
+                <p>&copy; <span id="currentYear"></span> Komunitas Nyampah Bersama. Seluruh hak cipta dilindungi.</p>
             </div>
         </div>
         
-        <div class="footer">
-            <div class="social-icons" id="socialIcons">
-                <!-- Social icons will be generated by JavaScript -->
+        <!-- Tab: Kelola Konten -->
+        <div class="tab-content" id="management-tab">
+            <div class="management-container">
+                <div class="form-section">
+                    <h3 class="form-title"><i class="fas fa-users"></i> Informasi Komunitas</h3>
+                    
+                    <div class="form-group">
+                        <label for="communityNameInput">Nama Komunitas</label>
+                        <input type="text" id="communityNameInput" class="form-control" placeholder="Contoh: Nyampah Bersama">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="communitySloganInput">Slogan Komunitas</label>
+                        <input type="text" id="communitySloganInput" class="form-control" placeholder="Contoh: Peduli Lingkungan, Peduli Masa Depan">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bannerTitleInput">Judul Banner</label>
+                        <input type="text" id="bannerTitleInput" class="form-control" placeholder="Contoh: Aksi Nyata Untuk Lingkungan Bersih">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bannerDescriptionInput">Deskripsi Banner</label>
+                        <textarea id="bannerDescriptionInput" class="form-control" placeholder="Deskripsi singkat tentang komunitas"></textarea>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="statMembersInput">Jumlah Anggota</label>
+                            <input type="number" id="statMembersInput" class="form-control" placeholder="Contoh: 1200">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="statEventsInput">Jumlah Kegiatan</label>
+                            <input type="number" id="statEventsInput" class="form-control" placeholder="Contoh: 85">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="statWasteInput">Sampah Terkelola (Ton)</label>
+                            <input type="number" id="statWasteInput" class="form-control" placeholder="Contoh: 12">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="socialMediaInput">Media Sosial (format: platform:URL, pisahkan dengan koma)</label>
+                        <textarea id="socialMediaInput" class="form-control" placeholder="Contoh: whatsapp:https://wa.me/6281234567890, instagram:https://instagram.com/nyampahbersama"></textarea>
+                    </div>
+                    
+                    <button class="btn btn-primary" id="saveCommunityInfo">
+                        <i class="fas fa-save"></i> Simpan Informasi Komunitas
+                    </button>
+                </div>
+                
+                <div class="form-section">
+                    <h3 class="form-title"><i class="fas fa-calendar-alt"></i> Kegiatan Komunitas</h3>
+                    
+                    <div class="form-group">
+                        <label for="activityTitle">Judul Kegiatan</label>
+                        <input type="text" id="activityTitle" class="form-control" placeholder="Contoh: Jumat Bersih-Bersih">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="activityDescription">Deskripsi Kegiatan</label>
+                        <textarea id="activityDescription" class="form-control" placeholder="Deskripsi lengkap kegiatan"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="activityDate">Tanggal/Waktu</label>
+                        <input type="text" id="activityDate" class="form-control" placeholder="Contoh: Setiap Jumat, 07:00 - 09:00">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="activityImage">URL Gambar</label>
+                        <input type="text" id="activityImage" class="form-control" placeholder="URL gambar kegiatan">
+                    </div>
+                    
+                    <button class="btn btn-primary" id="addActivityBtn">
+                        <i class="fas fa-plus-circle"></i> Tambah Kegiatan
+                    </button>
+                    
+                    <div class="activities-list" id="activitiesList">
+                        <!-- Activities will be listed here -->
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3 class="form-title"><i class="fas fa-download"></i> Ekspor/Impor Data</h3>
+                    
+                    <div class="form-group">
+                        <label for="jsonData">Data JSON</label>
+                        <textarea id="jsonData" class="form-control" rows="6" placeholder="Data JSON akan muncul di sini"></textarea>
+                    </div>
+                    
+                    <div class="action-buttons">
+                        <button class="btn btn-primary" id="exportJsonBtn">
+                            <i class="fas fa-file-export"></i> Ekspor Data
+                        </button>
+                        
+                        <button class="btn btn-secondary" id="importJsonBtn">
+                            <i class="fas fa-file-import"></i> Impor Data
+                        </button>
+                        
+                        <button class="btn btn-accent" id="resetDataBtn">
+                            <i class="fas fa-redo"></i> Reset ke Default
+                        </button>
+                    </div>
+                </div>
             </div>
-            <p>&copy; 2023 Komunitas Nyampah Bersama. Seluruh hak cipta dilindungi.</p>
+        </div>
+        
+        <!-- Tab: Bagikan -->
+        <div class="tab-content" id="share-tab">
+            <div class="share-container">
+                <h2 class="share-title">Bagikan Komunitas Kami!</h2>
+                <p class="share-description">Bantu kami menyebarkan semangat peduli lingkungan dengan membagikan halaman ini ke media sosial. Bersama kita bisa membuat perubahan!</p>
+                
+                <div class="share-preview">
+                    <img id="sharePreviewImage" src="https://images.unsplash.com/photo-1583511655826-05700d52f31d?auto=format&fit=crop&w=600" alt="Preview Share">
+                    <h3 id="sharePreviewTitle">Bergabung dengan Komunitas Nyampah Bersama</h3>
+                    <p id="sharePreviewDesc">Komunitas peduli lingkungan yang fokus pada pengelolaan sampah dan penciptaan lingkungan bersih. Setiap aksi kecil memiliki dampak besar!</p>
+                </div>
+                
+                <div class="share-buttons">
+                    <button class="share-btn facebook" id="shareFB">
+                        <i class="fab fa-facebook-f"></i>
+                        Bagikan ke Facebook
+                    </button>
+                    
+                    <button class="share-btn twitter" id="shareTW">
+                        <i class="fab fa-twitter"></i>
+                        Bagikan ke Twitter
+                    </button>
+                    
+                    <button class="share-btn whatsapp" id="shareWA">
+                        <i class="fab fa-whatsapp"></i>
+                        Bagikan ke WhatsApp
+                    </button>
+                    
+                    <button class="share-btn linkedin" id="shareLI">
+                        <i class="fab fa-linkedin-in"></i>
+                        Bagikan ke LinkedIn
+                    </button>
+                    
+                    <button class="share-btn copy-link" id="copyLink">
+                        <i class="fas fa-link"></i>
+                        Salin Tautan
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
     <script>
-        // URL untuk file JSON (bisa disesuaikan)
-        const DATA_URL = 'data.json';
-        
-        // Fungsi untuk memuat data dari JSON
-        async function loadCommunityData() {
-            try {
-                // Tampilkan loading state
-                document.getElementById('cardList').innerHTML = `
-                    <div class="loading">
-                        <i class="fas fa-spinner"></i>
-                        <p>Memuat kegiatan...</p>
+        // Data default untuk komunitas
+        const defaultData = {
+            community: {
+                name: "Nyampah Bersama",
+                slogan: "Komunitas Peduli Lingkungan dan Pengelolaan Sampah",
+                description: "Bergabunglah dengan komunitas kami untuk menciptakan lingkungan yang lebih bersih dan berkelanjutan. Setiap aksi kecil memiliki dampak besar!",
+                stats: {
+                    members: 1250,
+                    events: 87,
+                    wasteManaged: 12.5
+                },
+                socialMedia: {
+                    whatsapp: "#",
+                    instagram: "#",
+                    facebook: "#",
+                    youtube: "#"
+                }
+            },
+            activities: [
+                {
+                    id: 1,
+                    title: "Jumat Bersih-Bersih",
+                    description: "Aksi bersih-bersih pantai bersama komunitas setiap Jumat pagi. Terbuka untuk umum dan semua usia.",
+                    date: "Setiap Jumat, 07:00 - 09:00",
+                    image: "https://images.unsplash.com/photo-1583511655826-05700d52f31d?auto=format&fit=crop&w=600"
+                },
+                {
+                    id: 2,
+                    title: "Workshop Daur Ulang",
+                    description: "Belajar mengubah sampah plastik menjadi barang bernilai ekonomi. Gratis untuk anggota komunitas.",
+                    date: "28 Juli 2023, 13:00 - 15:00",
+                    image: "https://images.unsplash.com/photo-1583512603805-3cc6b41f3edb?auto=format&fit=crop&w=600"
+                },
+                {
+                    id: 3,
+                    title: "Bank Sampah Digital",
+                    description: "Tukarkan sampah Anda menjadi poin dan dapatkan hadiah menarik melalui aplikasi Bank Sampah Digital kami.",
+                    date: "Program Berkelanjutan",
+                    image: "https://images.unsplash.com/photo-1606787366850-de6330128bfc?auto=format&fit=crop&w=600"
+                }
+            ],
+            callToActions: [
+                {
+                    text: "Daftar Sekarang",
+                    icon: "user-plus",
+                    url: "#daftar",
+                    type: "primary"
+                },
+                {
+                    text: "Lihat Jadwal",
+                    icon: "calendar-check",
+                    url: "#jadwal",
+                    type: "secondary"
+                }
+            ]
+        };
+
+        // Fungsi untuk memuat data dari localStorage atau default
+        function loadCommunityData() {
+            let data;
+            const savedData = localStorage.getItem('communityData');
+            
+            if (savedData) {
+                data = JSON.parse(savedData);
+            } else {
+                data = defaultData;
+                localStorage.setItem('communityData', JSON.stringify(data));
+            }
+            
+            return data;
+        }
+
+        // Fungsi untuk menyimpan data ke localStorage
+        function saveCommunityData(data) {
+            localStorage.setItem('communityData', JSON.stringify(data));
+        }
+
+        // Fungsi untuk merender tampilan banner
+        function renderBanner() {
+            const data = loadCommunityData();
+            
+            // Update informasi komunitas
+            document.getElementById('communityName').textContent = data.community.name;
+            document.getElementById('communitySlogan').textContent = data.community.slogan;
+            document.getElementById('bannerTitle').textContent = "Aksi Nyata Untuk Lingkungan Bersih";
+            document.getElementById('bannerDescription').textContent = data.community.description;
+            
+            // Update statistik
+            document.getElementById('statMembers').textContent = data.community.stats.members + '+';
+            document.getElementById('statEvents').textContent = data.community.stats.events + '+';
+            document.getElementById('statWaste').textContent = data.community.stats.wasteManaged + ' Ton';
+            
+            // Update tahun hak cipta
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Generate cards
+            const cardList = document.getElementById('cardList');
+            cardList.innerHTML = '';
+            data.activities.forEach(activity => {
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.innerHTML = `
+                    <div class="card-img" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('${activity.image}')"></div>
+                    <div class="card-content">
+                        <h3>${activity.title}</h3>
+                        <p>${activity.description}</p>
+                        <p class="date"><i class="far fa-calendar-alt"></i> ${activity.date}</p>
                     </div>
                 `;
-                
-                const response = await fetch(DATA_URL);
-                const data = await response.json();
-                
-                // Update informasi komunitas
-                document.getElementById('communityName').textContent = data.community.name;
-                document.getElementById('communitySlogan').textContent = data.community.slogan;
-                document.getElementById('communityDescription').textContent = data.community.description;
-                
-                // Update statistik
-                document.getElementById('statMembers').textContent = data.community.stats.members + '+';
-                document.getElementById('statEvents').textContent = data.community.stats.events + '+';
-                document.getElementById('statWaste').textContent = data.community.stats.wasteManaged + ' Ton';
-                
-                // Generate cards
-                const cardList = document.getElementById('cardList');
-                cardList.innerHTML = '';
-                data.activities.forEach(activity => {
-                    const card = document.createElement('div');
-                    card.className = 'card';
-                    card.innerHTML = `
-                        <div class="card-img" style="background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('${activity.image}')"></div>
-                        <div class="card-content">
-                            <h3>${activity.title}</h3>
-                            <p>${activity.description}</p>
-                            <p class="date"><i class="far fa-calendar-alt"></i> ${activity.date}</p>
-                        </div>
-                    `;
-                    cardList.appendChild(card);
+                cardList.appendChild(card);
+            });
+            
+            // Generate indicators
+            const indicatorsContainer = document.getElementById('indicators');
+            indicatorsContainer.innerHTML = '';
+            data.activities.forEach((_, index) => {
+                const indicator = document.createElement('div');
+                indicator.className = 'indicator';
+                if (index === 0) indicator.classList.add('active');
+                indicatorsContainer.appendChild(indicator);
+            });
+            
+            // Generate action buttons
+            const actionButtonsContainer = document.getElementById('actionButtons');
+            actionButtonsContainer.innerHTML = '';
+            data.callToActions.forEach(action => {
+                const button = document.createElement('button');
+                button.className = `btn btn-${action.type}`;
+                button.innerHTML = `<i class="fas fa-${action.icon}"></i> ${action.text}`;
+                button.addEventListener('click', () => {
+                    alert(`Aksi: ${action.text}\nURL: ${action.url}`);
                 });
+                actionButtonsContainer.appendChild(button);
+            });
+            
+            // Generate social icons
+            const socialIconsContainer = document.getElementById('socialIcons');
+            socialIconsContainer.innerHTML = '';
+            
+            for (const [platform, url] of Object.entries(data.community.socialMedia)) {
+                const icon = document.createElement('a');
+                icon.href = url;
+                icon.target = "_blank";
                 
-                // Generate indicators
-                const indicatorsContainer = document.getElementById('indicators');
-                indicatorsContainer.innerHTML = '';
-                data.activities.forEach((_, index) => {
-                    const indicator = document.createElement('div');
-                    indicator.className = 'indicator';
-                    if (index === 0) indicator.classList.add('active');
-                    indicatorsContainer.appendChild(indicator);
-                });
-                
-                // Generate action buttons
-                const actionButtonsContainer = document.getElementById('actionButtons');
-                actionButtonsContainer.innerHTML = '';
-                data.callToActions.forEach(action => {
-                    const button = document.createElement('button');
-                    button.className = `btn btn-${action.type}`;
-                    button.innerHTML = `<i class="fas fa-${action.icon}"></i> ${action.text}`;
-                    button.addEventListener('click', () => {
-                        alert(`Aksi: ${action.text}\nURL: ${action.url}`);
-                    });
-                    actionButtonsContainer.appendChild(button);
-                });
-                
-                // Generate social icons
-                const socialIconsContainer = document.getElementById('socialIcons');
-                socialIconsContainer.innerHTML = '';
-                
-                // Tambahkan ikon untuk setiap platform sosial
-                for (const [platform, url] of Object.entries(data.community.socialMedia)) {
-                    const icon = document.createElement('a');
-                    icon.href = url;
-                    icon.target = "_blank";
-                    
-                    let iconClass;
-                    switch(platform) {
-                        case 'whatsapp':
-                            iconClass = 'fab fa-whatsapp';
-                            break;
-                        case 'instagram':
-                            iconClass = 'fab fa-instagram';
-                            break;
-                        case 'facebook':
-                            iconClass = 'fab fa-facebook-f';
-                            break;
-                        case 'youtube':
-                            iconClass = 'fab fa-youtube';
-                            break;
-                        case 'tiktok':
-                            iconClass = 'fab fa-tiktok';
-                            break;
-                        default:
-                            iconClass = 'fas fa-share-alt';
-                    }
-                    
-                    icon.innerHTML = `<i class="${iconClass}"></i>`;
-                    socialIconsContainer.appendChild(icon);
+                let iconClass;
+                switch(platform) {
+                    case 'whatsapp':
+                        iconClass = 'fab fa-whatsapp';
+                        break;
+                    case 'instagram':
+                        iconClass = 'fab fa-instagram';
+                        break;
+                    case 'facebook':
+                        iconClass = 'fab fa-facebook-f';
+                        break;
+                    case 'youtube':
+                        iconClass = 'fab fa-youtube';
+                        break;
+                    default:
+                        iconClass = 'fas fa-share-alt';
                 }
                 
-                // Inisialisasi drag & drop
-                initDragDrop();
-                
-            } catch (error) {
-                console.error('Error loading data:', error);
-                document.getElementById('cardList').innerHTML = `
-                    <div class="loading">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <p>Gagal memuat data. Silakan coba lagi.</p>
+                icon.innerHTML = `<i class="${iconClass}"></i>`;
+                socialIconsContainer.appendChild(icon);
+            }
+            
+            // Inisialisasi drag & drop
+            initDragDrop();
+        }
+
+        // Fungsi untuk merender form manajemen
+        function renderManagementForm() {
+            const data = loadCommunityData();
+            
+            // Isi form dengan data saat ini
+            document.getElementById('communityNameInput').value = data.community.name;
+            document.getElementById('communitySloganInput').value = data.community.slogan;
+            document.getElementById('bannerTitleInput').value = "Aksi Nyata Untuk Lingkungan Bersih";
+            document.getElementById('bannerDescriptionInput').value = data.community.description;
+            document.getElementById('statMembersInput').value = data.community.stats.members;
+            document.getElementById('statEventsInput').value = data.community.stats.events;
+            document.getElementById('statWasteInput').value = data.community.stats.wasteManaged;
+            
+            // Format media sosial untuk textarea
+            const socialMediaArray = [];
+            for (const [platform, url] of Object.entries(data.community.socialMedia)) {
+                socialMediaArray.push(`${platform}:${url}`);
+            }
+            document.getElementById('socialMediaInput').value = socialMediaArray.join(', ');
+            
+            // Render daftar kegiatan
+            renderActivitiesList();
+            
+            // Render JSON data
+            document.getElementById('jsonData').value = JSON.stringify(data, null, 2);
+        }
+
+        // Fungsi untuk merender daftar kegiatan
+        function renderActivitiesList() {
+            const data = loadCommunityData();
+            const activitiesList = document.getElementById('activitiesList');
+            activitiesList.innerHTML = '';
+            
+            data.activities.forEach((activity, index) => {
+                const activityItem = document.createElement('div');
+                activityItem.className = 'activity-item';
+                activityItem.innerHTML = `
+                    <div class="activity-thumb" style="background-image: url('${activity.image}')"></div>
+                    <div class="activity-details">
+                        <div class="activity-title">${activity.title}</div>
+                        <div class="activity-date">${activity.date}</div>
+                        <p>${activity.description}</p>
+                    </div>
+                    <div class="activity-actions">
+                        <button class="btn-icon edit-activity" data-index="${index}">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="btn-icon delete-activity" data-index="${index}">
+                            <i class="fas fa-trash"></i>
+                        </button>
                     </div>
                 `;
-            }
+                activitiesList.appendChild(activityItem);
+            });
+            
+            // Tambahkan event listener untuk tombol edit dan hapus
+            document.querySelectorAll('.edit-activity').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    editActivity(index);
+                });
+            });
+            
+            document.querySelectorAll('.delete-activity').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const index = this.getAttribute('data-index');
+                    deleteActivity(index);
+                });
+            });
         }
 
         // Fungsi untuk inisialisasi drag & drop
@@ -742,8 +1326,218 @@
             });
         }
 
-        // Muat data saat halaman siap
-        document.addEventListener('DOMContentLoaded', loadCommunityData);
+        // Fungsi untuk menambah kegiatan baru
+        function addActivity() {
+            const title = document.getElementById('activityTitle').value;
+            const description = document.getElementById('activityDescription').value;
+            const date = document.getElementById('activityDate').value;
+            const image = document.getElementById('activityImage').value;
+            
+            if (!title || !description || !date) {
+                alert('Harap isi semua field yang diperlukan');
+                return;
+            }
+            
+            const data = loadCommunityData();
+            const newId = data.activities.length > 0 ? 
+                Math.max(...data.activities.map(a => a.id)) + 1 : 1;
+            
+            data.activities.push({
+                id: newId,
+                title,
+                description,
+                date,
+                image: image || "https://via.placeholder.com/600x400?text=No+Image"
+            });
+            
+            saveCommunityData(data);
+            renderActivitiesList();
+            renderBanner();
+            
+            // Reset form
+            document.getElementById('activityTitle').value = '';
+            document.getElementById('activityDescription').value = '';
+            document.getElementById('activityDate').value = '';
+            document.getElementById('activityImage').value = '';
+            
+            alert('Kegiatan berhasil ditambahkan!');
+        }
+
+        // Fungsi untuk mengedit kegiatan
+        function editActivity(index) {
+            const data = loadCommunityData();
+            const activity = data.activities[index];
+            
+            document.getElementById('activityTitle').value = activity.title;
+            document.getElementById('activityDescription').value = activity.description;
+            document.getElementById('activityDate').value = activity.date;
+            document.getElementById('activityImage').value = activity.image;
+            
+            // Hapus kegiatan yang akan diedit
+            deleteActivity(index);
+        }
+
+        // Fungsi untuk menghapus kegiatan
+        function deleteActivity(index) {
+            const data = loadCommunityData();
+            data.activities.splice(index, 1);
+            saveCommunityData(data);
+            renderActivitiesList();
+            renderBanner();
+        }
+
+        // Fungsi untuk menyimpan informasi komunitas
+        function saveCommunityInfo() {
+            const data = loadCommunityData();
+            
+            data.community.name = document.getElementById('communityNameInput').value;
+            data.community.slogan = document.getElementById('communitySloganInput').value;
+            data.community.description = document.getElementById('bannerDescriptionInput').value;
+            data.community.stats.members = parseInt(document.getElementById('statMembersInput').value) || 0;
+            data.community.stats.events = parseInt(document.getElementById('statEventsInput').value) || 0;
+            data.community.stats.wasteManaged = parseFloat(document.getElementById('statWasteInput').value) || 0;
+            
+            // Parse media sosial
+            const socialMediaInput = document.getElementById('socialMediaInput').value;
+            const socialMediaArray = socialMediaInput.split(',').map(item => item.trim());
+            data.community.socialMedia = {};
+            
+            socialMediaArray.forEach(item => {
+                if (item) {
+                    const [platform, url] = item.split(':');
+                    if (platform && url) {
+                        data.community.socialMedia[platform.trim()] = url.trim();
+                    }
+                }
+            });
+            
+            saveCommunityData(data);
+            renderBanner();
+            renderManagementForm();
+            
+            alert('Informasi komunitas berhasil disimpan!');
+        }
+
+        // Fungsi untuk mengekspor data sebagai JSON
+        function exportJson() {
+            const data = loadCommunityData();
+            const jsonData = JSON.stringify(data, null, 2);
+            document.getElementById('jsonData').value = jsonData;
+            
+            // Buat blob untuk download
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'komunitas-nyampah-bersama.json';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            alert('Data berhasil diekspor!');
+        }
+
+        // Fungsi untuk mengimpor data dari JSON
+        function importJson() {
+            const jsonString = document.getElementById('jsonData').value;
+            
+            try {
+                const data = JSON.parse(jsonString);
+                saveCommunityData(data);
+                renderBanner();
+                renderManagementForm();
+                alert('Data berhasil diimpor!');
+            } catch (e) {
+                alert('Format JSON tidak valid: ' + e.message);
+            }
+        }
+
+        // Fungsi untuk mereset data ke default
+        function resetData() {
+            if (confirm('Apakah Anda yakin ingin mengembalikan data ke setelan awal? Semua perubahan akan dihapus.')) {
+                saveCommunityData(defaultData);
+                renderBanner();
+                renderManagementForm();
+                alert('Data berhasil direset ke default!');
+            }
+        }
+
+        // Fungsi untuk inisialisasi
+        function init() {
+            // Render konten awal
+            renderBanner();
+            renderManagementForm();
+            
+            // Set tahun di footer
+            document.getElementById('currentYear').textContent = new Date().getFullYear();
+            
+            // Event listener untuk tab
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.addEventListener('click', function() {
+                    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    document.getElementById(`${this.dataset.tab}-tab`).classList.add('active');
+                    
+                    if (this.dataset.tab === 'management') {
+                        renderManagementForm();
+                    }
+                });
+            });
+            
+            // Event listener untuk form
+            document.getElementById('addActivityBtn').addEventListener('click', addActivity);
+            document.getElementById('saveCommunityInfo').addEventListener('click', saveCommunityInfo);
+            document.getElementById('exportJsonBtn').addEventListener('click', exportJson);
+            document.getElementById('importJsonBtn').addEventListener('click', importJson);
+            document.getElementById('resetDataBtn').addEventListener('click', resetData);
+            
+            // Fungsi sharing
+            document.getElementById('shareFB').addEventListener('click', function() {
+                const url = encodeURIComponent(window.location.href);
+                window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}`, '_blank');
+            });
+            
+            document.getElementById('shareTW').addEventListener('click', function() {
+                const text = encodeURIComponent("Bergabung dengan Komunitas Nyampah Bersama - Peduli Lingkungan!");
+                const url = encodeURIComponent(window.location.href);
+                window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
+            });
+            
+            document.getElementById('shareWA').addEventListener('click', function() {
+                const text = encodeURIComponent(`Bergabung dengan Komunitas Nyampah Bersama! ${window.location.href}`);
+                window.open(`https://api.whatsapp.com/send?text=${text}`, '_blank');
+            });
+            
+            document.getElementById('shareLI').addEventListener('click', function() {
+                const url = encodeURIComponent(window.location.href);
+                window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
+            });
+            
+            document.getElementById('copyLink').addEventListener('click', function() {
+                const tempInput = document.createElement('input');
+                tempInput.value = window.location.href;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+                
+                // Ubah teks tombol sementara
+                const originalText = this.innerHTML;
+                this.innerHTML = '<i class="fas fa-check"></i> Tautan Tersalin!';
+                this.style.background = 'linear-gradient(to right, #28a745, #218838)';
+                
+                setTimeout(() => {
+                    this.innerHTML = originalText;
+                    this.style.background = 'linear-gradient(to right, #6c757d, #5a6268)';
+                }, 2000);
+            });
+        }
+
+        // Jalankan inisialisasi saat halaman dimuat
+        document.addEventListener('DOMContentLoaded', init);
     </script>
 </body>
 </html>
