@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nyampah Bersama | Profil Komunitas & Struktur Organisasi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2E8B57;
+            --primary-dark: #1d6340;
+            --secondary: #3498db;
+            --accent: #8e44ad;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --info: #2980b9;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --transition: all 0.3s ease;
+            --shadow: 0 4px 12px rgba(0,0,0,0.08);
+            --border-radius: 8px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            background-attachment: fixed;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--primary-dark);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        
+        /* Navigation */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .logo-nav {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .logo-nav .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 24px;
+        }
+        
+        .logo-nav h1 {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 15px;
+            border-radius: 30px;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover, .nav-links a.active {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+        }
+        
+        /* Header Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero .logo {
+            width: 150px;
+            height: 150px;
+            background: white;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 70px;
+            box-shadow: var(--shadow);
+        }
+        
+        .hero h1 {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        .hero .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+        
+        .stats-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        
+        .stat {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            min-width: 200px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+        
+        .card-title {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        .card-title i {
+            font-size: 1.8rem;
+        }
+        
+        /* Mission & Vision */
+        .mission-vision-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .mission, .vision {
+            padding: 2.5rem;
+            border-radius: var(--border-radius);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            min-height: 280px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .mission {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .vision {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+        }
+        
+        .mission h3, .vision h3 {
+            color: white;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .mission p, .vision p {
+            position: relative;
+            z-index: 2;
+            font-size: 1.1rem;
+        }
+        
+        /* Core Focus */
+        .focus-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .focus-item {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 1.8rem;
+            border-left: 4px solid var(--primary);
+            transition: var(--transition);
+        }
+        
+        .focus-item:hover {
+            background: white;
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+        
+        /* Initiatives */
+        .initiatives-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.8rem;
+        }
+        
+        .initiative-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 1.8rem;
+            box-shadow: var(--shadow);
+            border-top: 3px solid var(--success);
+            transition: var(--transition);
+        }
+        
+        .initiative-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+        
+        .initiative-card h4 {
+            color: var(--primary-dark);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .initiative-card p {
+            color: var(--gray);
+        }
+        
+        /* Community Model */
+        .model-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .model-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+        
+        .model-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+        
+        .model-card h3 {
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        /* Research & Publications */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .skill {
+            background: var(--light);
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            border: 1px solid var(--light-gray);
+        }
+        
+        .skill i {
+            color: var(--primary);
+        }
+        
+        .publications-list {
+            list-style: none;
+            margin-left: 1.5rem;
+        }
+        
+        .publications-list li {
+            margin-bottom: 1.8rem;
+            padding-left: 2rem;
+            position: relative;
+            border-left: 2px solid var(--light-gray);
+        }
+        
+        .publications-list li:before {
+            content: '📄';
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 1.2rem;
+        }
+        
+        /* Expertise */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .expertise-card {
+            background: var(--light);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid var(--light-gray);
+        }
+        
+        .expertise-card:hover {
+            background: white;
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+        
+        .expertise-card i {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.8rem;
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+        }
+        
+        .contact-card i {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+        
+        /* Hierarchy Tree Styling */
+        .tree {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 30px 0;
+        }
+        
+        .level {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 60px;
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        
+        .node {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            width: 300px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .node:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            border-color: var(--primary);
+        }
+        
+        .node::before {
+            content: '';
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 30px;
+            background: var(--primary);
+        }
+        
+        .node.high-level {
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            padding: 30px;
+            width: 340px;
+        }
+        
+        .node.top-level {
+            background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 35px;
+            width: 380px;
+        }
+        
+        .node-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--primary-dark);
+        }
+        
+        .node.top-level .node-title {
+            color: white;
+            font-size: 1.4rem;
+        }
+        
+        .node-desc {
+            font-size: 1rem;
+            color: #666;
+            line-height: 1.5;
+        }
+        
+        .node.top-level .node-desc {
+            color: rgba(255,255,255,0.9);
+        }
+        
+        /* Divisions */
+        .division-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .division-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 5px solid var(--primary);
+        }
+        
+        .division-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .card-header {
+            background: #e8f5e9;
+            padding: 25px;
+            border-bottom: 1px solid #c8e6c9;
+        }
+        
+        .card-title {
+            color: var(--primary-dark);
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .card-title i {
+            margin-right: 15px;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .card-section {
+            margin-bottom: 25px;
+        }
+        
+        .card-section h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            border-bottom: 1px dashed #c8e6c9;
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .card-section ul {
+            padding-left: 25px;
+        }
+        
+        .card-section li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+        
+        /* Requirements */
+        .requirements {
+            background: #f5fbf5;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 40px;
+            box-shadow: var(--shadow);
+        }
+        
+        .requirements h2 {
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .req-container {
+            display: flex;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        
+        .req-box {
+            flex: 1;
+            min-width: 320px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .req-box h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        /* Roadmap */
+        .roadmap {
+            position: relative;
+            padding-left: 2.5rem;
+            margin-top: 2.5rem;
+        }
+        
+        .roadmap:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 4px;
+            background: var(--light-gray);
+        }
+        
+        .roadmap-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-left: 2.5rem;
+        }
+        
+        .roadmap-item:before {
+            content: '';
+            position: absolute;
+            left: -11px;
+            top: 7px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px var(--primary);
+        }
+        
+        .roadmap-date {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 0 2.5rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .disclaimer {
+            margin-top: 2.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.7;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .level {
+                flex-wrap: wrap;
+            }
+            
+            .division-cards {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero .tagline {
+                font-size: 1.2rem;
+            }
+            
+            .stats-container {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .stat {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .mission-vision-container {
+                grid-template-columns: 1fr;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo-nav">
+                <div class="logo-icon">
+                    <i class="fas fa-recycle"></i>
+                </div>
+                <h1>Nyampah Bersama</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#profil" class="active">Profil Komunitas</a>
+                <a href="#struktur">Struktur Organisasi</a>
+                <a href="#divisi">Divisi Program</a>
+                <a href="#syarat">Syarat & Kewajiban</a>
+                <a href="#kontak">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="profil">
+        <div class="container hero-content">
+            <div class="logo">
+                <i class="fas fa-recycle"></i>
+            </div>
+            <h1>Nyampah Bersama</h1>
+            <p class="tagline">Bridging Waste Management with Web3 for Sustainable Communities</p>
+            <p>Pioneering grassroots community based in Palembang, Indonesia, transforming waste into value through Web3 technology since 2023.</p>
+            
+            <div class="stats-container">
+                <div class="stat">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Community Members</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Research Papers</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Key Initiatives</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">2023</div>
+                    <div class="stat-label">Founded</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Mission & Vision Section -->
+        <section>
+            <div class="section-title">
+                <h2>Mission & Vision</h2>
+            </div>
+            
+            <div class="mission-vision-container">
+                <div class="mission">
+                    <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
+                    <p>To integrate Proof of Attention Value (PoAV), the 2BCycle Framework, and circular economy principles into applied social research that transforms waste into opportunity.</p>
+                </div>
+                
+                <div class="vision">
+                    <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                    <p>To establish a leading, community-driven research hub focused on decentralized technology and environmental action, creating replicable sustainability infrastructures globally.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Core Focus & Initiatives Section -->
+        <section>
+            <div class="section-title">
+                <h2>Core Focus & Initiatives</h2>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title"><i class="fas fa-crosshairs"></i> Core Focus Areas</h3>
+                
+                <div class="focus-container">
+                    <div class="focus-item">
+                        <h4>Environmental Education & Digital Waste Management</h4>
+                        <p>Empowering communities with knowledge and tools for efficient waste handling</p>
+                    </div>
+                    <div class="focus-item">
+                        <h4>Incentive-Based Technologies</h4>
+                        <p>Developing innovative solutions like NyampahCoin and NFT Proof of Clean Act (PoCA)</p>
+                    </div>
+                    <div class="focus-item">
+                        <h4>Open Research & Verification Systems</h4>
+                        <p>Implementing transparent systems to ensure accountability and data integrity</p>
+                    </div>
+                    <div class="focus-item">
+                        <h4>Web3-Based Ecosystems</h4>
+                        <p>Utilizing DAOs and smart contracts for transparent community-driven governance</p>
+                    </div>
+                    <div class="focus-item">
+                        <h4>Replicable Sustainability Infrastructures</h4>
+                        <p>Building models adaptable by communities worldwide</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title"><i class="fas fa-lightbulb"></i> Key Initiatives</h3>
+                
+                <div class="initiatives-grid">
+                    <div class="initiative-card">
+                        <h4>Nyampah Academy</h4>
+                        <p>Educational platform fostering environmental literacy and sustainable practices</p>
+                    </div>
+                    <div class="initiative-card">
+                        <h4>2BCycle Framework</h4>
+                        <p>(BlockCycle & BurnCycle) - Integrating behavioral economics and decentralized technology</p>
+                    </div>
+                    <div class="initiative-card">
+                        <h4>Digital Waste Passport</h4>
+                        <p>System for tracking and managing waste digitally throughout its lifecycle</p>
+                    </div>
+                    <div class="initiative-card">
+                        <h4>Web3 Technology Experiments</h4>
+                        <p>Exploring AI, IPFS, and decentralized systems to enhance sustainability</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Community Model & Impact Section -->
+        <section>
+            <div class="section-title">
+                <h2>Community Model & Impact</h2>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title"><i class="fas fa-users"></i> Our Community Model</h3>
+                <p>Nyampah Bersama operates on an open-scale, distributed membership model, removing technological or financial barriers for participation. Through accessible platforms such as WhatsApp, Glide, blockchain wallets, and open learning resources, we engage hundreds of participants—from students to micro-entrepreneurs.</p>
+                
+                <div class="model-grid">
+                    <div class="model-card">
+                        <h3><i class="fas fa-expand-arrows-alt"></i> Open Structure</h3>
+                        <p>Enables organic scaling while preserving local identity and ownership</p>
+                    </div>
+                    <div class="model-card">
+                        <h3><i class="fas fa-network-wired"></i> Distributed Model</h3>
+                        <p>No central authority - community-driven decision making</p>
+                    </div>
+                    <div class="model-card">
+                        <h3><i class="fas fa-mobile-alt"></i> Accessible Platforms</h3>
+                        <p>Reach participants through familiar tools like WhatsApp</p>
+                    </div>
+                </div>
+                
+                <h3 class="card-title" style="margin-top: 2rem;"><i class="fas fa-chart-line"></i> Our Impact</h3>
+                <p>By integrating real-world actions like waste separation, clean-up drives, and ecological entrepreneurship with digital records and token incentives (NyampahCoin), we are building a scalable and inclusive movement that proves: "People's waste can shape the world's future."</p>
+            </div>
+        </section>
+        
+        <!-- Research & Publications Section -->
+        <section>
+            <div class="section-title">
+                <h2>Research & Publications</h2>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title"><i class="fas fa-flask"></i> Research Focus Areas</h3>
+                
+                <div class="skills-container">
+                    <div class="skill"><i class="fas fa-search"></i> Proof of Attention Value</div>
+                    <div class="skill"><i class="fas fa-brain"></i> Behavioral Economics and Trust</div>
+                    <div class="skill"><i class="fab fa-ethereum"></i> Social Blockchain Technology</div>
+                    <div class="skill"><i class="fas fa-network-wired"></i> Decentralization of Digital Social Systems</div>
+                    <div class="skill"><i class="fas fa-handshake"></i> Peer-to-Peer Trust & Reward Framework Models</div>
+                    <div class="skill"><i class="fas fa-coins"></i> Tokenization of Actions</div>
+                    <div class="skill"><i class="fas fa-memory"></i> Collective Memory Systems</div>
+                </div>
+                
+                <h3 class="card-title" style="margin-top: 2rem;"><i class="fas fa-book"></i> Selected Publications</h3>
+                
+                <ul class="publications-list">
+                    <li>
+                        <strong>Muhlisin, M.O. (2024).</strong> "Implementasi Proof of Attention Value dalam Ekosistem Digital Sosial." <em>Jurnal Teknologi dan Inovasi, 12(3), 45-62.</em>
+                    </li>
+                    <li>
+                        <strong>Muhlisin, M.O. (2023).</strong> "Model Ekonomi Perilaku untuk Sistem Desentralisasi: Studi Kasus Nyampah Bersama." <em>In Prosiding Konferensi Nasional Teknologi Blockchain, Jakarta, Indonesia.</em>
+                    </li>
+                    <li>
+                        <strong>Muhlisin, M.O. & Pratama, A. (2023).</strong> "Trust Mechanism in Decentralized Social Applications." <em>International Journal of Blockchain Innovation, 5(2), 78-95.</em>
+                    </li>
+                    <li>
+                        <strong>Muhlisin, M.O. (2025).</strong> "Paradigma Baru." <em>Zenodo.</em> DOI: 10.5281/zenodo.15736119
+                    </li>
+                    <li>
+                        <strong>Oky & Nyampah Bersama (2025).</strong> "[Whitepaper 2BCycle & PoAV]." <em>IPFS.</em> CID: bafkreihmp4xvifhw6gqebgyijizylsdlgomedq5qc22ulpc6dhraynjcry
+                    </li>
+                    <li>
+                        <strong>Oky (2025).</strong> "Proposal Hibah 2BCycle." <em>IPFS.</em> CID: bafkreig57lmqmkowj2vokkzvxqd3hefffwcrbzkzt53qchuj7a7rvhr5xq
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Expertise & Competencies Section -->
+        <section>
+            <div class="section-title">
+                <h2>Expertise & Competencies</h2>
+            </div>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <i class="fas fa-cubes"></i>
+                    <h3>Decentralized Systems & Blockchain</h3>
+                    <p>Expertise in blockchain technology and decentralized applications</p>
+                </div>
+                <div class="expertise-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Social Application Framework Development</h3>
+                    <p>Building frameworks for community-driven applications</p>
+                </div>
+                <div class="expertise-card">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Digital Behavioral Economic Analysis</h3>
+                    <p>Analyzing economic behaviors in digital environments</p>
+                </div>
+                <div class="expertise-card">
+                    <i class="fas fa-coins"></i>
+                    <h3>Social System Tokenization</h3>
+                    <p>Creating token-based incentive systems for social good</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Organizational Structure Section -->
+        <section id="struktur">
+            <div class="section-title">
+                <h2><i class="fas fa-sitemap"></i> Struktur Organisasi</h2>
+            </div>
+            
+            <div class="card">
+                <div class="tree">
+                    <!-- Level 1: Dewan Pengawas -->
+                    <div class="level">
+                        <div class="node top-level">
+                            <div class="node-title">Dewan Pengawas / Komite Etik</div>
+                            <div class="node-desc">Tingkatan tertinggi pengawasan independen, memastikan kepatuhan terhadap nilai-nilai, etika, dan peraturan</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Level 2: Ketua -->
+                    <div class="level">
+                        <div class="node high-level">
+                            <div class="node-title">Ketua Komunitas</div>
+                            <div class="node-desc">Pemimpin utama strategi, operasional keseluruhan, dan representasi komunitas</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Level 3: Wakil Ketua, Sekretaris, Bendahara -->
+                    <div class="level">
+                        <div class="node">
+                            <div class="node-title">Wakil Ketua Komunitas</div>
+                            <div class="node-desc">Mendukung Ketua, koordinasi antar divisi, dan pengawasan implementasi program</div>
+                        </div>
+                        <div class="node">
+                            <div class="node-title">Sekretaris Jenderal</div>
+                            <div class="node-desc">Administrasi, dokumentasi, komunikasi, dan kepatuhan regulasi</div>
+                        </div>
+                        <div class="node">
+                            <div class="node-title">Bendahara</div>
+                            <div class="node-desc">Manajemen keuangan, laporan, kepatuhan finansial, dan audit internal</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Level 4: Kepala Divisi -->
+                    <div class="level">
+                        <div class="node">
+                            <div class="node-title">Kepala Divisi Edukasi</div>
+                            <div class="node-desc">Merancang & melaksanakan kurikulum edukasi pengelolaan sampah</div>
+                        </div>
+                        <div class="node">
+                            <div class="node-title">Kepala Divisi Insentif & Reward</div>
+                            <div class="node-desc">Mengembangkan sistem penghargaan untuk partisipasi anggota</div>
+                        </div>
+                        <div class="node">
+                            <div class="node-title">Kepala Divisi Marketplace</div>
+                            <div class="node-desc">Pengelolaan platform marketplace produk daur ulang</div>
+                        </div>
+                        <div class="node">
+                            <div class="node-title">Kepala Divisi Bank Sampah Digital</div>
+                            <div class="node-desc">Pengembangan sistem digitalisasi bank sampah</div>
+                        </div>
+                        <div class="node">
+                            <div class="node-title">Kepala Divisi Energi & Maggot</div>
+                            <div class="node-desc">Pengembangan solusi energi terbarukan dari sampah</div>
+                        </div>
+                        <div class="node">
+                            <div class="node-title">Kepala Divisi Premium Eksklusif</div>
+                            <div class="node-desc">Manajemen program insentif eksklusif untuk pionir</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Level 5: Staf & Anggota -->
+                    <div class="level">
+                        <div class="node">
+                            <div class="node-title">Staf Divisi Program</div>
+                            <div class="node-desc">Pelaksana kegiatan dan program di masing-masing divisi</div>
+                        </div>
+                        <div class="node">
+                            <div class="node-title">Anggota Umum</div>
+                            <div class="node-desc">Seluruh anggota komunitas yang terdaftar dan berpartisipasi</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Program Divisions Section -->
+        <section id="divisi">
+            <div class="section-title">
+                <h2><i class="fas fa-th-large"></i> Divisi Program</h2>
+            </div>
+            
+            <div class="division-cards">
+                <!-- Division 1 -->
+                <div class="division-card">
+                    <div class="card-header">
+                        <div class="card-title"><i class="fas fa-graduation-cap"></i> Divisi Program Edukasi</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-section">
+                            <h3><i class="fas fa-tasks"></i> Tugas Kepala Divisi</h3>
+                            <ul>
+                                <li>Merancang & melaksanakan kurikulum edukasi</li>
+                                <li>Memastikan materi relevan dan menarik</li>
+                                <li>Melakukan evaluasi dampak edukasi</li>
+                                <li>Mendorong perubahan perilaku positif</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h3><i class="fas fa-list-ul"></i> Sub-Program</h3>
+                            <ul>
+                                <li>Pilah Sampah dari Rumah</li>
+                                <li>Ekonomi Sampah (Saldo Sampah Tabungan Digital)</li>
+                                <li>Energi Hijau dan Daur Ulang</li>
+                                <li>Sekolah Hidup Bersih Luar Dalam</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h3><i class="fas fa-users"></i> Staf Program</h3>
+                            <ul>
+                                <li>Pengembang kurikulum</li>
+                                <li>Tim pengajar/fasilitator</li>
+                                <li>Koordinator acara edukasi</li>
+                                <li>Tim monitoring & evaluasi</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Division 2 -->
+                <div class="division-card">
+                    <div class="card-header">
+                        <div class="card-title"><i class="fas fa-award"></i> Divisi Insentif dan Reward</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-section">
+                            <h3><i class="fas fa-tasks"></i> Tugas Kepala Divisi</h3>
+                            <ul>
+                                <li>Mengembangkan sistem penghargaan</li>
+                                <li>Memastikan poin dan hadiah dikelola dengan integritas</li>
+                                <li>Mengidentifikasi kemitraan untuk hadiah</li>
+                                <li>Menjaga transparansi dan keadilan sistem</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h3><i class="fas fa-list-ul"></i> Sub-Program</h3>
+                            <ul>
+                                <li>Poin Reward Harian</li>
+                                <li>Saldo NyampahCoin & Marketplace Reward</li>
+                                <li>Level Nasabah (Pemula → Setia → Legenda)</li>
+                                <li>Hadiah Digital & Fisik</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h3><i class="fas fa-users"></i> Staf Program</h3>
+                            <ul>
+                                <li>Administrator sistem poin</li>
+                                <li>Analis data partisipasi</li>
+                                <li>Koordinator hadiah</li>
+                                <li>Tim kemitraan reward</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Division 3 -->
+                <div class="division-card">
+                    <div class="card-header">
+                        <div class="card-title"><i class="fas fa-shopping-cart"></i> Divisi Marketplace</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-section">
+                            <h3><i class="fas fa-tasks"></i> Tugas Kepala Divisi</h3>
+                            <ul>
+                                <li>Mengelola platform marketplace</li>
+                                <li>Memastikan kualitas produk daur ulang</li>
+                                <li>Mempromosikan UMKM lokal</li>
+                                <li>Memperluas jangkauan pasar</li>
+                                <li>Mengelola inventarisasi dan logistik</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h3><i class="fas fa-list-ul"></i> Sub-Program</h3>
+                            <ul>
+                                <li>Penyediaan Sampah Terpilah</li>
+                                <li>Produk Kreatif Home Made</li>
+                                <li>Kompos Organik & Urban Farming Kit</li>
+                                <li>Marketplace Internal + Ekspansi ke Tokopedia/Shopee</li>
+                                <li>Program NET Produk Daur Ulang Eksklusif</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h3><i class="fas fa-users"></i> Staf Program</h3>
+                            <ul>
+                                <li>Pengelola platform e-commerce</li>
+                                <li>Kurator produk</li>
+                                <li>Tim pemasaran digital</li>
+                                <li>Tim logistik</li>
+                                <li>Tim hubungan penjual</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Division 4 -->
+                <div class="division-card">
+                    <div class="card-header">
+                        <div class="card-title"><i class="fas fa-mobile-alt"></i> Divisi Bank Sampah Digital</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-section">
+                            <h3><i class="fas fa-tasks"></i> Tugas Kepala Divisi</h3>
+                            <ul>
+                                <li>Merancang sistem digital bank sampah</li>
+                                <li>Memastikan sistem aman dan user-friendly</li>
+                                <li>Memastikan integrasi data akurat</li>
+                                <li>Mengatasi masalah teknis</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h3><i class="fas fa-list-ul"></i> Sub-Program</h3>
+                            <ul>
+                                <li>Wallet Sampah Digital Umum Rakyat</li>
+                                <li>Sistem Setor-Sampah → Dapat Saldo Digital</li>
+                                <li>Hubungkan Bank Sampah Konvensional → Digital</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h3><i class="fas fa-users"></i> Staf Program</h3>
+                            <ul>
+                                <li>Pengembang aplikasi/sistem</li>
+                                <li>Analis data</li>
+                                <li>Spesialis keamanan data</li>
+                                <li>Tim dukungan teknis</li>
+                                <li>Koordinator integrasi bank sampah</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Division 5 -->
+                <div class="division-card">
+                    <div class="card-header">
+                        <div class="card-title"><i class="fas fa-bolt"></i> Divisi Energi & Maggot</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-section">
+                            <h3><i class="fas fa-tasks"></i> Tugas Kepala Divisi</h3>
+                            <ul>
+                                <li>Mengembangkan solusi energi terbarukan</li>
+                                <li>Mempromosikan budidaya maggot</li>
+                                <li>Melakukan riset dan pilot project</li>
+                                <li>Memastikan praktik aman dan ramah lingkungan</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h3><i class="fas fa-list-ul"></i> Sub-Program</h3>
+                            <ul>
+                                <li>Komposter Rumah & Komunitas</li>
+                                <li>Unit Maggot Rakyat → Budidaya → Marketplace</li>
+                                <li>Program Minyak Jelantah → Biodiesel Rakyat</li>
+                                <li>Biodigester Mini → Produksi Biogas Lokal</li>
+                                <li>Skema Tokenisasi Energi Sampah</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h3><i class="fas fa-users"></i> Staf Program</h3>
+                            <ul>
+                                <li>Peneliti/inovator</li>
+                                <li>Teknisi lapangan</li>
+                                <li>Koordinator budidaya maggot</li>
+                                <li>Ahli biogas</li>
+                                <li>Tim edukasi teknis</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Division 6 -->
+                <div class="division-card">
+                    <div class="card-header">
+                        <div class="card-title"><i class="fas fa-crown"></i> Divisi Premium Eksklusif</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-section">
+                            <h3><i class="fas fa-tasks"></i> Tugas Kepala Divisi</h3>
+                            <ul>
+                                <li>Merancang program insentif eksklusif</li>
+                                <li>Mengidentifikasi peluang kolaborasi premium</li>
+                                <li>Mengembangkan peluang kolaborasi</li>
+                                <li>Memastikan nilai tambah bagi anggota</li>
+                                <li>Menjaga transparansi kriteria</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h3><i class="fas fa-list-ul"></i> Sub-Program</h3>
+                            <ul>
+                                <li>Golden Seller di Marketplace</li>
+                                <li>NFT Founder Rakyat Nyampah</li>
+                                <li>Akses Pendanaan Mikro Proyek Inovasi</li>
+                                <li>Ekspor Produk Daur Ulang Premium</li>
+                                <li>Badge Eksklusif + Gelar</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="card-section">
+                            <h3><i class="fas fa-users"></i> Staf Program</h3>
+                            <ul>
+                                <li>Koordinator program</li>
+                                <li>Tim hubungan anggota premium</li>
+                                <li>Kurator peluang investasi/ekspor</li>
+                                <li>Tim komunikasi khusus</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Requirements Section -->
+        <section id="syarat">
+            <div class="section-title">
+                <h2><i class="fas fa-clipboard-check"></i> Syarat & Kewajiban Anggota</h2>
+            </div>
+            
+            <div class="requirements">
+                <div class="req-container">
+                    <div class="req-box">
+                        <h3><i class="fas fa-user-check"></i> Syarat Keanggotaan</h3>
+                        <ul>
+                            <li>Mengisi formulir pendaftaran anggota</li>
+                            <li>Menyetujui Anggaran Dasar/Rumah Tangga (AD/ART)</li>
+                            <li>Menyetujui Kode Etik Komunitas</li>
+                            <li>Menyetujui Kebijakan Perlindungan Data Pribadi</li>
+                            <li>Bersedia mematuhi prinsip non-diskriminasi dan inklusivitas</li>
+                            <li>Menghargai hak asasi manusia</li>
+                            <li>(Opsional) Memiliki ketertarikan pada isu lingkungan dan ekonomi sirkular</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="req-box">
+                        <h3><i class="fas fa-user-shield"></i> Kewajiban Umum</h3>
+                        <ul>
+                            <li>Mematuhi Kode Etik dan semua kebijakan komunitas</li>
+                            <li>Menjaga kerahasiaan informasi sensitif</li>
+                            <li>Berinteraksi secara profesional dan tanpa diskriminasi</li>
+                            <li>Mendukung visi dan misi komunitas dengan integritas</li>
+                            <li>Berpartisipasi aktif dalam upaya komunitas</li>
+                            <li>Memromosikan nilai-nilai positif, inklusivitas, dan keberlanjutan</li>
+                            <li>Melaporkan pelanggaran etika melalui saluran pengaduan</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="kontak">
+            <div class="section-title">
+                <h2>Organizational Details & Contact</h2>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title"><i class="fas fa-address-card"></i> Registration & Legal Information</h3>
+                
+                <div class="focus-container">
+                    <div class="focus-item">
+                        <h4>Registration ID</h4>
+                        <p>Erasmus+ and European Solidarity Corps: E10404020</p>
+                    </div>
+                    <div class="focus-item">
+                        <h4>Official Wallet</h4>
+                        <p>0x7Af07c98e1B47FD928E5e761B7477074DD536162</p>
+                    </div>
+                    <div class="focus-item">
+                        <h4>System Tagline</h4>
+                        <p>2BCycle Research Registry – Decentralized Community Research</p>
+                    </div>
+                    <div class="focus-item">
+                        <h4>ORCID ID</h4>
+                        <p>0009-0003-5705-8107</p>
+                    </div>
+                </div>
+                
+                <h3 class="card-title" style="margin-top: 2rem;"><i class="fas fa-envelope"></i> Contact Information</h3>
+                
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h4>Location</h4>
+                        <p>Palembang, Indonesia</p>
+                        <p>Google Maps Plus Code: 6P962QW7+25</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>Phone/WhatsApp</h4>
+                        <p>+62 831-7782-8139</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h4>Email</h4>
+                        <p>admin@nyampahbersama.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fas fa-link"></i>
+                        <h4>Linktree</h4>
+                        <p>linktr.ee/nyampahbersama</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Roadmap & Future Plans Section -->
+        <section>
+            <div class="section-title">
+                <h2>Roadmap & Future Plans</h2>
+            </div>
+            
+            <div class="card">
+                <div class="roadmap">
+                    <div class="roadmap-item">
+                        <div class="roadmap-date">Q3 2025</div>
+                        <h4>Integrate all publications into ORCID</h4>
+                        <p>Centralize research documentation for global accessibility</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-date">Q4 2025</div>
+                        <h4>Implement ORCID publication API endpoints</h4>
+                        <p>Enable automated integration with academic databases</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-date">Q1 2026</div>
+                        <h4>Submit grant applications</h4>
+                        <p>Horizon, Gitcoin, UNDP funding initiatives</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-date">Q2 2026</div>
+                        <h4>Develop NFT Identity System</h4>
+                        <p>Digital identity for community members and achievements</p>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-date">Q3 2026</div>
+                        <h4>Launch Scientific Document Collections</h4>
+                        <p>Tokenized research papers and datasets</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>This page represents the official academic profile of the Nyampah Bersama Research Collective.</p>
+            
+            <div class="footer-links">
+                <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                <a href="#"><i class="fab fa-discord"></i> Discord</a>
+                <a href="#"><i class="fab fa-github"></i> GitHub</a>
+                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a href="#"><i class="fas fa-file-contract"></i> Whitepaper</a>
+            </div>
+            
+            <div class="disclaimer">
+                <p>All metadata, documents, and links are fully owned by the community and are committed to openness via Web3 and ORCID.</p>
+                <p>© 2025 Nyampah Bersama. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Remove active class from all links
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add hover effect to nodes
+        document.querySelectorAll('.node').forEach(node => {
+            node.addEventListener('mouseenter', () => {
+                node.style.transform = 'translateY(-8px)';
+                node.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
+            });
+            
+            node.addEventListener('mouseleave', () => {
+                node.style.transform = 'translateY(0)';
+                node.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            });
+        });
+        
+        // Highlight active section in navigation
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('.nav-links a');
+            
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
